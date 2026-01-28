@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # 允许在 GitHub Actions 页面手动点击按钮触发构建
 
 env:
-  GODOT_VERSION: 4.5 # 【需要修改】Godot 版本，必须与你本地开发使用的版本一致
+  GODOT_VERSION: 4.3 # 【需要修改】Godot 版本，必须与你本地开发使用的版本一致
   EXPORT_NAME: study-survivor # 导出后的 APK 文件名
   PROJECT_PATH: study-survivor # project.godot 文件所在的目录名
 
