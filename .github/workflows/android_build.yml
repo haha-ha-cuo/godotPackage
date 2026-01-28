@@ -1,0 +1,83 @@
+name: Android Build
+
+on:
+  push:
+    branches: [ main, master ] # 当推送到 main 或 master 分支时触发
+  pull_request:
+    branches: [ main, master ] # 当提交 PR 到这些分支时触发
+  workflow_dispatch: # 允许在 GitHub Actions 页面手动点击按钮触发构建
+
+env:
+  GODOT_VERSION: 4.5 # 【需要修改】Godot 版本，必须与你本地开发使用的版本一致
+  EXPORT_NAME: study-survivor # 导出后的 APK 文件名
+  PROJECT_PATH: study-survivor # project.godot 文件所在的目录名
+
+jobs:
+  export-android:
+    name: Android Export
+    runs-on: ubuntu-latest # 使用 Ubuntu 虚拟机运行构建
+    
+    steps:
+      # 1. 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      # 2. 安装 Java (Android 构建依赖 Java 环境)
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # 3. 安装 Android SDK (构建 APK 必须的工具链)
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        
+      # 4. 安装 Godot 引擎
+      - name: Install Godot
+        uses: chickensoft-games/setup-godot@v1
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false # 如果你的项目是用 C# 写的，这里改为 true
+          
+      # 5. 安装导出模板 (Godot 导出 APK 需要对应版本的模板文件)
+      - name: Install Export Templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          wget -q https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz
+          unzip -q Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz
+          mv templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
+          rm -rf templates Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz
+
+      # 6. 检查配置文件是否存在 (这是最容易报错的地方)
+      - name: Verify Export Presets
+        run: |
+          if [ ! -f "${{ env.PROJECT_PATH }}/export_presets.cfg" ]; then
+            echo "错误: 在 ${{ env.PROJECT_PATH }} 目录下未找到 export_presets.cfg 文件。"
+            echo "请在本地打开 Godot -> 项目 -> 导出，添加 Android 预设并保存。"
+            exit 1
+          fi
+
+      # 7. 生成调试用签名证书 (Debug Keystore)
+      # Android 打包必须要有签名。这里自动生成一个临时的调试证书，方便快速测试。
+      # 如果你要发布到 Google Play，需要配置 Secrets 使用正式证书。
+      - name: Generate Debug Keystore
+        run: |
+          keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=Android Debug,O=Android,C=US"
+          mv debug.keystore ${{ env.PROJECT_PATH }}/debug.keystore
+
+      # 8. 执行导出命令
+      - name: Export APK
+        run: |
+          mkdir -p build/android
+          # 注意："Android" 必须是你本地 export_presets.cfg 中预设的名字（大小写敏感）
+          # --export-debug 表示打调试包，如果要打正式包改为 --export-release
+          godot --headless --path ${{ env.PROJECT_PATH }} --export-debug "Android" ../build/android/${{ env.EXPORT_NAME }}.apk
+
+      # 9. 上传构建产物
+      # 构建完成后，将生成的 APK 上传到 GitHub Action 的 Summary 页面供下载
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: build/android/*.apk
