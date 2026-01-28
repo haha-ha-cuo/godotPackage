@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd7orwre1wmos"]
+
+[ext_resource type="PackedScene" uid="uid://ywwrlsxcfirm" path="res://assets/enemies/Meshes/GolemMesh.fbx" id="1_nswnk"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_08r1j"]
+[ext_resource type="AnimationLibrary" uid="uid://dq4305qs7ufn" path="res://assets/enemies/Animations/Golem/Golem_Anim.tres" id="3_mw7jb"]
+
+[node name="GolemMesh" instance=ExtResource("1_nswnk")]
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/0/position = Vector3(0.01106905, 0.8090949, -0.038857855)
+bones/0/rotation = Quaternion(-0.3677188, -0.46247974, 0.4952515, 0.6368841)
+bones/1/position = Vector3(0.33897522, 3.5527136e-17, 1.8651746e-16)
+bones/1/rotation = Quaternion(-0.0011404507, 0.01546954, 0.10367678, 0.99449015)
+bones/2/position = Vector3(0.39631546, 1.2490009e-16, 1.9212143e-17)
+bones/2/rotation = Quaternion(3.642919e-17, -1.6729245e-16, 0.022828478, 0.99973947)
+bones/3/position = Vector3(0.29024896, 3.375078e-16, 7.105427e-17)
+bones/3/rotation = Quaternion(0.0093708765, 0.007063183, -0.7163971, 0.6975941)
+bones/4/position = Vector3(0.21610732, -0.004182988, 1.696948e-17)
+bones/4/rotation = Quaternion(0.9486501, -0.31632727, -5.551175e-17, -5.5509222e-17)
+bones/5/rotation = Quaternion(-1.422477e-08, 5.411406e-08, -0.30323678, 0.9529153)
+bones/6/position = Vector3(0.3491524, 0.0029759482, 3.4595249e-09)
+bones/9/position = Vector3(0.18494318, -0.0066147074, -0.15905699)
+bones/11/position = Vector3(0.18496038, -0.008085592, 0.15905723)
+bones/17/rotation = Quaternion(0.2824756, 0.514313, -0.1245686, 0.80010784)
+bones/18/rotation = Quaternion(-0.017033316, -0.03706612, -0.48585555, 0.8730867)
+bones/19/rotation = Quaternion(-0.03317612, 0.011936965, -0.53759307, 0.8424669)
+bones/20/rotation = Quaternion(-0.19338873, 0.23562239, 0.13534284, 0.9427435)
+bones/21/rotation = Quaternion(0.03852733, -0.11396331, 0.2176208, 0.9685914)
+bones/23/rotation = Quaternion(0.009540398, 0.0035353084, 0.39393076, 0.9190839)
+bones/24/rotation = Quaternion(-0.005427362, 0.25311768, 0.00013572723, 0.96742034)
+bones/26/rotation = Quaternion(-0.00430676, 0.015233918, 0.39085057, 0.92031807)
+bones/27/rotation = Quaternion(-0.0039605936, 0.22702453, 0.0003756785, 0.973881)
+bones/29/rotation = Quaternion(-0.0077449847, 0.015807696, 0.3809798, 0.92441577)
+bones/30/rotation = Quaternion(-0.003151131, 0.21227157, 8.616222e-05, 0.97720563)
+bones/32/position = Vector3(-0.04457104, 0.06817384, 0.09697652)
+bones/32/rotation = Quaternion(-0.23430897, -0.46117932, 0.13915901, 0.8444216)
+bones/34/rotation = Quaternion(-0.11538808, -0.61909926, 0.02190677, 0.7764805)
+bones/35/rotation = Quaternion(0.017303037, 0.03728722, -0.4889629, 0.87133557)
+bones/36/rotation = Quaternion(0.15373085, -0.13901076, -0.48869976, 0.84747595)
+bones/37/rotation = Quaternion(0.17056203, -0.2821536, 0.19576423, 0.9235661)
+bones/38/rotation = Quaternion(-0.024383437, 0.09896787, 0.2910174, 0.95127267)
+bones/40/rotation = Quaternion(0.01317174, -0.11327424, 0.41335356, 0.9034015)
+bones/41/rotation = Quaternion(0.005417296, -0.3415255, -0.0003668643, 0.9398569)
+bones/43/rotation = Quaternion(0.041275833, -0.11540224, 0.39363855, 0.9110584)
+bones/44/rotation = Quaternion(0.0039784843, -0.33021754, -5.1421743e-05, 0.9438965)
+bones/46/rotation = Quaternion(0.07185231, -0.12823194, 0.3685941, 0.91789556)
+bones/47/rotation = Quaternion(0.0031415666, -0.3132977, -0.0002468263, 0.94964975)
+bones/49/position = Vector3(-0.068819225, 0.023440922, -0.103700064)
+bones/49/rotation = Quaternion(0.060911857, 0.5758297, 0.009355158, 0.8152438)
+bones/51/position = Vector3(0.38078862, 2.4035672e-17, 0.0051310956)
+bones/51/rotation = Quaternion(-5.293956e-23, -0.72882724, 4.053185e-23, 0.6846976)
+bones/53/rotation = Quaternion(0.7288275, 8.834758e-09, 0.6846974, -9.404175e-09)
+bones/55/position = Vector3(0.56281894, 0.010887044, 1.9332136e-17)
+
+[node name="Golem" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_08r1j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"Golem_Anim": ExtResource("3_mw7jb")
+}

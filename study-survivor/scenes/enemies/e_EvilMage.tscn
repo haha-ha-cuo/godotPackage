@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://di7dqcggmgr2h"]
+
+[ext_resource type="PackedScene" uid="uid://dxmro2yg7pota" path="res://assets/enemies/Meshes/EvilMageMesh.fbx" id="1_l3cpc"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_6b1u1"]
+
+[node name="EvilMageMesh" instance=ExtResource("1_l3cpc")]
+
+[node name="EvilMage" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_6b1u1")
+
+[node name="Staff" parent="Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("2_6b1u1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]

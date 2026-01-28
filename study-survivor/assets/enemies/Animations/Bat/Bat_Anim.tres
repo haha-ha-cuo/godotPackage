@@ -1,0 +1,36 @@
+[gd_resource type="AnimationLibrary" load_steps=16 format=3 uid="uid://bl43bp3mqt056"]
+
+[ext_resource type="Animation" uid="uid://7tdr86s83f6n" path="res://assets/enemies/Animations/Bat/Attack02_Bat_Anim.res" id="1_fbq1y"]
+[ext_resource type="Animation" uid="uid://i6l0n1wfjov5" path="res://assets/enemies/Animations/Bat/FlyFWD_Bat_Anim.res" id="2_afrkv"]
+[ext_resource type="Animation" uid="uid://b8jahkmj8m0pd" path="res://assets/enemies/Animations/Bat/IdleBattle_Bat_Anim.res" id="3_bjs63"]
+[ext_resource type="Animation" uid="uid://b3tp1bcv0o3pq" path="res://assets/enemies/Animations/Bat/IdleNormal_Bat_Anim.res" id="4_mkr7i"]
+[ext_resource type="Animation" uid="uid://c0r5jbioekgg4" path="res://assets/enemies/Animations/Bat/Attack01_Bat_Anim.res" id="5_tpu3j"]
+[ext_resource type="Animation" uid="uid://b1bpanxy6g0e6" path="res://assets/enemies/Animations/Bat/Die_Bat_Anim.res" id="6_07pc6"]
+[ext_resource type="Animation" uid="uid://dieq1wwjjawp4" path="res://assets/enemies/Animations/Bat/Dizzy_Bat_Anim.res" id="7_dibs7"]
+[ext_resource type="Animation" uid="uid://d102pq515dp1k" path="res://assets/enemies/Animations/Bat/FlyBWD_Bat_Anim.res" id="8_bke5q"]
+[ext_resource type="Animation" uid="uid://h7p4wcw2muvj" path="res://assets/enemies/Animations/Bat/FlyLeft_Bat_Anim.res" id="9_1hdc0"]
+[ext_resource type="Animation" uid="uid://o50y6nrj1k1c" path="res://assets/enemies/Animations/Bat/FlyRight_Bat_Anim.res" id="10_1fvlg"]
+[ext_resource type="Animation" uid="uid://brhiv4l7lx8wq" path="res://assets/enemies/Animations/Bat/GetHit_Bat_Anim.res" id="11_qjapk"]
+[ext_resource type="Animation" uid="uid://d0jk7hvxgxd4s" path="res://assets/enemies/Animations/Bat/SenseSomethingRPT_Bat_Anim.res" id="12_0njjq"]
+[ext_resource type="Animation" uid="uid://dnuyc832br28f" path="res://assets/enemies/Animations/Bat/SenseSomethingST_Bat_Anim.res" id="13_cewd0"]
+[ext_resource type="Animation" uid="uid://ea32w05307ve" path="res://assets/enemies/Animations/Bat/Taunting_Bat_Anim.res" id="14_gfvne"]
+[ext_resource type="Animation" uid="uid://b50geh7weqhwx" path="res://assets/enemies/Animations/Bat/Victory_Bat_Anim.res" id="15_t0w2l"]
+
+[resource]
+_data = {
+&"Attack01_Bat_Anim": ExtResource("5_tpu3j"),
+&"Attack02_Bat_Anim": ExtResource("1_fbq1y"),
+&"Die_Bat_Anim": ExtResource("6_07pc6"),
+&"Dizzy_Bat_Anim": ExtResource("7_dibs7"),
+&"FlyBWD_Bat_Anim": ExtResource("8_bke5q"),
+&"FlyFWD_Bat_Anim": ExtResource("2_afrkv"),
+&"FlyLeft_Bat_Anim": ExtResource("9_1hdc0"),
+&"FlyRight_Bat_Anim": ExtResource("10_1fvlg"),
+&"GetHit_Bat_Anim": ExtResource("11_qjapk"),
+&"IdleBattle_Bat_Anim": ExtResource("3_bjs63"),
+&"IdleNormal_Bat_Anim": ExtResource("4_mkr7i"),
+&"SenseSomethingRPT_Bat_Anim": ExtResource("12_0njjq"),
+&"SenseSomethingST_Bat_Anim": ExtResource("13_cewd0"),
+&"Taunting_Bat_Anim": ExtResource("14_gfvne"),
+&"Victory_Bat_Anim": ExtResource("15_t0w2l")
+}

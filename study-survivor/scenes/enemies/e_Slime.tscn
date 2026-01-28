@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtcay8dcqm2n4"]
+
+[ext_resource type="PackedScene" uid="uid://k3ywsg0jjvfa" path="res://assets/enemies/Meshes/SlimeMesh.fbx" id="1_vdfuf"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_d3s1c"]
+
+[node name="SlimeMesh" instance=ExtResource("1_vdfuf")]
+
+[node name="Slime" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_d3s1c")

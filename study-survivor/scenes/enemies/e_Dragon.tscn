@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmr5i8q6tw0x8"]
+
+[ext_resource type="PackedScene" uid="uid://ohefl50bgw8s" path="res://assets/enemies/Meshes/DragonMesh.fbx" id="1_6qmpe"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_dpry3"]
+[ext_resource type="AnimationLibrary" uid="uid://csrc6skxst0c2" path="res://assets/enemies/Animations/Dragon/Dragon_Anim.tres" id="3_dpry3"]
+
+[node name="DragonMesh" instance=ExtResource("1_6qmpe")]
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/0/position = Vector3(0.01463116, 1.5818222, -0.36029273)
+bones/0/rotation = Quaternion(0.6895651, -0.10785815, 0.70796025, -0.10797636)
+bones/1/position = Vector3(0.2962074, 0, -7.521761e-17)
+bones/1/rotation = Quaternion(-2.0679515e-25, 2.7141864e-24, -0.10502736, 0.99446934)
+bones/2/position = Vector3(0.30496415, 2.842171e-16, -1.2836954e-16)
+bones/2/rotation = Quaternion(0.9842564, -0.1767468, -1.0822264e-17, 6.026632e-17)
+bones/3/position = Vector3(0.31979018, 0, 1.204592e-16)
+bones/3/rotation = Quaternion(0.977496, -0.21095389, 1.2916773e-17, -5.9852394e-17)
+bones/4/rotation = Quaternion(4.135903e-25, -5.169879e-26, -0.3135982, 0.94955575)
+bones/5/rotation = Quaternion(0.24294433, -0.66406184, 0.24294433, 0.66406184)
+bones/6/rotation = Quaternion(0.8978941, -0.4402116, -2.6954294e-17, 5.497833e-17)
+bones/7/rotation = Quaternion(-0.3002876, 0.6401776, 0.3002876, 0.6401776)
+bones/9/position = Vector3(0.41954762, 1.688494e-16, -8.388462e-17)
+bones/10/position = Vector3(0.32761386, -0.01191401, 0.06550871)
+bones/11/position = Vector3(-0.27486783, -0.2440513, 0.2022554)
+bones/11/rotation = Quaternion(0.9769087, 0.16667004, -0.13177662, 0.02248236)
+bones/12/position = Vector3(-0.1761261, -0.18895285, 0.2122285)
+bones/12/rotation = Quaternion(0.9769087, 0.16667004, -0.13177662, 0.02248236)
+bones/14/rotation = Quaternion(-0.28667635, 0.39324486, 0.048082206, 0.87227476)
+bones/16/rotation = Quaternion(-0.023965534, -0.0067340992, 0.36159232, 0.932004)
+bones/17/rotation = Quaternion(0.9036953, 0.19507737, -0.041291554, -0.37891257)
+bones/18/rotation = Quaternion(0.663197, 0.7360653, 0.09074342, -0.10071383)
+bones/19/rotation = Quaternion(0.89663625, 0.4391839, 0.0075289514, -0.055716906)
+bones/21/rotation = Quaternion(0.24389255, -0.9448108, 0.20841393, 0.06642733)
+bones/22/rotation = Quaternion(-7.3429476e-09, -7.151767e-06, -0.30767807, 0.9514905)
+bones/23/rotation = Quaternion(0.022213835, 0.0035088314, 0.36890268, 0.92919594)
+bones/24/rotation = Quaternion(0.90368736, 0.19507582, 0.041294344, 0.37893185)
+bones/26/rotation = Quaternion(0.8966336, 0.43919036, -0.00752803, 0.05570798)
+bones/27/rotation = Quaternion(0.7861345, -0.41982216, 0.40010828, 0.21367125)
+bones/30/rotation = Quaternion(-0.57336074, 0.7963694, 0.12976135, 0.14218049)
+bones/31/rotation = Quaternion(-4.9630837e-24, 0, 0.14176156, 0.9899008)
+bones/32/rotation = Quaternion(-0.14056382, -0.69299483, -0.14056382, 0.69299483)
+bones/33/rotation = Quaternion(-0.57335997, 0.7963705, -0.12976, -0.14217864)
+bones/34/rotation = Quaternion(-8.078073e-15, 2.9801504e-06, 0.14175852, 0.9899013)
+bones/35/rotation = Quaternion(0.6929957, -0.14056246, 0.6929944, 0.14056273)
+bones/37/rotation = Quaternion(-0.0042761294, 0.118570596, 0.035785988, 0.9922914)
+bones/38/rotation = Quaternion(-0.030988974, -0.6200978, -0.22676104, 0.75039846)
+bones/39/rotation = Quaternion(-0.024180606, 0.07724141, 0.7226282, 0.68648213)
+bones/40/rotation = Quaternion(0.0042765173, -0.11857537, 0.035784412, 0.99229085)
+bones/41/rotation = Quaternion(0.7794494, -0.083543666, 0.58316255, 0.21307425)
+bones/42/rotation = Quaternion(0.20929599, 0.9778524, -1.1670973e-15, -1.00930825e-16)
+bones/43/rotation = Quaternion(-3.1019278e-25, -3.6189157e-25, -0.10200603, 0.9947839)
+bones/44/rotation = Quaternion(0.42927524, 0.56189215, -0.35612297, 0.61088175)
+
+[node name="DragonMesh" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_dpry3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"Dragon_Anim": ExtResource("3_dpry3")
+}

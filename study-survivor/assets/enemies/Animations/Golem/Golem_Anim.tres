@@ -1,0 +1,38 @@
+[gd_resource type="AnimationLibrary" load_steps=17 format=3 uid="uid://dq4305qs7ufn"]
+
+[ext_resource type="Animation" uid="uid://cgkw1j2jg7g0" path="res://assets/enemies/Animations/Golem/Attack01_Golem_Anim.res" id="1_tqetq"]
+[ext_resource type="Animation" uid="uid://dpek03p7vo806" path="res://assets/enemies/Animations/Golem/Attack02_Golem_Anim.res" id="2_26rei"]
+[ext_resource type="Animation" uid="uid://c7x02fudfbw8m" path="res://assets/enemies/Animations/Golem/Die_Golem_Anim.res" id="3_tewhi"]
+[ext_resource type="Animation" uid="uid://dkeu6ldueiu0" path="res://assets/enemies/Animations/Golem/Dizzy_Golem_Anim.res" id="4_y7ksc"]
+[ext_resource type="Animation" uid="uid://dqhui7lhuabvc" path="res://assets/enemies/Animations/Golem/GetHit_Golem_Anim.res" id="5_h2syv"]
+[ext_resource type="Animation" uid="uid://b2h6g5li5gdcw" path="res://assets/enemies/Animations/Golem/IdleBattle_Golem_Anim.res" id="6_ncror"]
+[ext_resource type="Animation" uid="uid://r1yguphtr727" path="res://assets/enemies/Animations/Golem/IdleNormal_Golem_Anim.res" id="7_gj4hf"]
+[ext_resource type="Animation" uid="uid://cxwrutnn7cbkk" path="res://assets/enemies/Animations/Golem/Run_Golem_Anim.res" id="8_l5k13"]
+[ext_resource type="Animation" uid="uid://c8a5oomebnxo7" path="res://assets/enemies/Animations/Golem/SenseSomethingRT_Golem_Anim.res" id="9_3rjn5"]
+[ext_resource type="Animation" uid="uid://rjditay6h2c" path="res://assets/enemies/Animations/Golem/SenseSomethingST_Golem_Anim.res" id="10_ojq8s"]
+[ext_resource type="Animation" uid="uid://beoanuxj4uhtw" path="res://assets/enemies/Animations/Golem/Taunting_Golem_Anim.res" id="11_773lb"]
+[ext_resource type="Animation" uid="uid://b1n3x7eg0lr56" path="res://assets/enemies/Animations/Golem/Victory_Golem_Anim.res" id="12_4ca1o"]
+[ext_resource type="Animation" uid="uid://b53u8rhrgvdlj" path="res://assets/enemies/Animations/Golem/WalkBack_Golem_Anim.res" id="13_5jmge"]
+[ext_resource type="Animation" uid="uid://drjjasf8d3yd3" path="res://assets/enemies/Animations/Golem/WalkLeft_Golem_Anim.res" id="14_g11id"]
+[ext_resource type="Animation" uid="uid://y7la5hsd5t3d" path="res://assets/enemies/Animations/Golem/WalkRight_Golem_Anim.res" id="15_eqc4d"]
+[ext_resource type="Animation" uid="uid://bbwbfcof4xcf4" path="res://assets/enemies/Animations/Golem/Walk_Golem_Anim.res" id="16_o1sp1"]
+
+[resource]
+_data = {
+&"Attack01_Golem_Anim": ExtResource("1_tqetq"),
+&"Attack02_Golem_Anim": ExtResource("2_26rei"),
+&"Die_Golem_Anim": ExtResource("3_tewhi"),
+&"Dizzy_Golem_Anim": ExtResource("4_y7ksc"),
+&"GetHit_Golem_Anim": ExtResource("5_h2syv"),
+&"IdleBattle_Golem_Anim": ExtResource("6_ncror"),
+&"IdleNormal_Golem_Anim": ExtResource("7_gj4hf"),
+&"Run_Golem_Anim": ExtResource("8_l5k13"),
+&"SenseSomethingRT_Golem_Anim": ExtResource("9_3rjn5"),
+&"SenseSomethingST_Golem_Anim": ExtResource("10_ojq8s"),
+&"Taunting_Golem_Anim": ExtResource("11_773lb"),
+&"Victory_Golem_Anim": ExtResource("12_4ca1o"),
+&"WalkBack_Golem_Anim": ExtResource("13_5jmge"),
+&"WalkLeft_Golem_Anim": ExtResource("14_g11id"),
+&"WalkRight_Golem_Anim": ExtResource("15_eqc4d"),
+&"Walk_Golem_Anim": ExtResource("16_o1sp1")
+}

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bypdtiomskv35"]
+
+[ext_resource type="PackedScene" uid="uid://cf8fonm7sqpn6" path="res://assets/enemies/Meshes/MonsterPlantMesh.fbx" id="1_m0s5y"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_ngqax"]
+
+[node name="MonsterPlantMesh" instance=ExtResource("1_m0s5y")]
+
+[node name="polySurface5" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_ngqax")

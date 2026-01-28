@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cagc3ge831kjy"]
+
+[ext_resource type="PackedScene" uid="uid://mm2posrww2y3" path="res://assets/enemies/Meshes/OrcMesh.fbx" id="1_mytw1"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_5f83v"]
+
+[node name="OrcMesh" instance=ExtResource("1_mytw1")]
+
+[node name="Orc" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_5f83v")
+
+[node name="Maul" parent="Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("2_5f83v")

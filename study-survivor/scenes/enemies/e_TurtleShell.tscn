@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwj6bc225hat8"]
+
+[ext_resource type="PackedScene" uid="uid://dk6s67x4ftyi2" path="res://assets/enemies/Meshes/TurtleShellMesh.fbx" id="1_7t8be"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_jyrk5"]
+
+[node name="TurtleShellMesh" instance=ExtResource("1_7t8be")]
+
+[node name="TurtleShell" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_jyrk5")

@@ -1,0 +1,36 @@
+[gd_resource type="AnimationLibrary" load_steps=16 format=3 uid="uid://csrc6skxst0c2"]
+
+[ext_resource type="Animation" uid="uid://crb3pd34urtmf" path="res://assets/enemies/Animations/Dragon/Attack01_Dragon_Anim.res" id="1_y3cqo"]
+[ext_resource type="Animation" uid="uid://18iny6gcacu0" path="res://assets/enemies/Animations/Dragon/Attack02_Dragon_Anim.res" id="2_xfufk"]
+[ext_resource type="Animation" uid="uid://cpwv02h6kd3o3" path="res://assets/enemies/Animations/Dragon/Die_Dragon_Anim.res" id="3_mr7lq"]
+[ext_resource type="Animation" uid="uid://ct05lja74rpph" path="res://assets/enemies/Animations/Dragon/Dizzy_Dragon_Anim.res" id="4_3spq0"]
+[ext_resource type="Animation" uid="uid://djbf4io4wajmn" path="res://assets/enemies/Animations/Dragon/FlyBackward_Dragon_Anim.res" id="5_q72fn"]
+[ext_resource type="Animation" uid="uid://bbow6gky4twc" path="res://assets/enemies/Animations/Dragon/FlyForward_Dragon_Anim.res" id="6_bu5cp"]
+[ext_resource type="Animation" uid="uid://ce1ablhv7kc2g" path="res://assets/enemies/Animations/Dragon/FlyLeft_Dragon_Anim.res" id="7_qf3v0"]
+[ext_resource type="Animation" uid="uid://cgs0clho027c4" path="res://assets/enemies/Animations/Dragon/FlyRight_Dragon_Anim.res" id="8_hsyr2"]
+[ext_resource type="Animation" uid="uid://ppc0nuhrfgvb" path="res://assets/enemies/Animations/Dragon/GetHit_Dragon_Anim.res" id="9_swck2"]
+[ext_resource type="Animation" uid="uid://d0ugjkt38dpk5" path="res://assets/enemies/Animations/Dragon/IdleBattle_Dragon_Anim.res" id="10_j0dtc"]
+[ext_resource type="Animation" uid="uid://f6abxkyxbpc0" path="res://assets/enemies/Animations/Dragon/IdleNormal_Dragon_Anim.res" id="11_byf3p"]
+[ext_resource type="Animation" uid="uid://b3fjdf708eaod" path="res://assets/enemies/Animations/Dragon/SenseSomethingRPT_Dragon_Anim.res" id="12_tohyc"]
+[ext_resource type="Animation" uid="uid://b1buwk3o3ok6i" path="res://assets/enemies/Animations/Dragon/SenseSomethingST_Dragon_Anim.res" id="13_wadxk"]
+[ext_resource type="Animation" uid="uid://dvn1hljk8xh8t" path="res://assets/enemies/Animations/Dragon/Taunting_Dragon_Anim.res" id="14_j6clb"]
+[ext_resource type="Animation" uid="uid://b2h4lwst15ver" path="res://assets/enemies/Animations/Dragon/Victory_Dragon_Anim.res" id="15_2o0ne"]
+
+[resource]
+_data = {
+&"Attack01_Dragon_Anim": ExtResource("1_y3cqo"),
+&"Attack02_Dragon_Anim": ExtResource("2_xfufk"),
+&"Die_Dragon_Anim": ExtResource("3_mr7lq"),
+&"Dizzy_Dragon_Anim": ExtResource("4_3spq0"),
+&"FlyBackward_Dragon_Anim": ExtResource("5_q72fn"),
+&"FlyForward_Dragon_Anim": ExtResource("6_bu5cp"),
+&"FlyLeft_Dragon_Anim": ExtResource("7_qf3v0"),
+&"FlyRight_Dragon_Anim": ExtResource("8_hsyr2"),
+&"GetHit_Dragon_Anim": ExtResource("9_swck2"),
+&"IdleBattle_Dragon_Anim": ExtResource("10_j0dtc"),
+&"IdleNormal_Dragon_Anim": ExtResource("11_byf3p"),
+&"SenseSomethingRPT_Dragon_Anim": ExtResource("12_tohyc"),
+&"SenseSomethingST_Dragon_Anim": ExtResource("13_wadxk"),
+&"Taunting_Dragon_Anim": ExtResource("14_j6clb"),
+&"Victory_Dragon_Anim": ExtResource("15_2o0ne")
+}

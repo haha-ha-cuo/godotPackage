@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpej3isqllv4g"]
+
+[ext_resource type="PackedScene" uid="uid://cbkd5uqc27ciq" path="res://assets/enemies/Meshes/SkeletonMesh.fbx" id="1_gjyxn"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_tqkku"]
+
+[node name="SkeletonMesh" instance=ExtResource("1_gjyxn")]
+
+[node name="Skeleton" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_tqkku")
+
+[node name="Shield2" parent="Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("2_tqkku")
+
+[node name="Sword" parent="Skeleton3D" index="2"]
+surface_material_override/0 = ExtResource("2_tqkku")

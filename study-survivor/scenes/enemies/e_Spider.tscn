@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6npk1tr34nrp"]
+
+[ext_resource type="PackedScene" uid="uid://ctc4hv7xqvkry" path="res://assets/enemies/Meshes/SpiderMesh.fbx" id="1_s30p3"]
+[ext_resource type="Material" uid="uid://c1jgjagocdqyf" path="res://assets/enemies/Materials/Enemies.tres" id="2_ly3l7"]
+
+[node name="SpiderMesh" instance=ExtResource("1_s30p3")]
+
+[node name="Spider" parent="Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_ly3l7")
